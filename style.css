@@ -214,35 +214,85 @@ img {
 
 
 
-
-
-
-
 /* section (RIGHT) */
 .chat-container {
     display:flex;
     flex-direction: column;
     width:70%;
     height:100%;
-    background-color: green;
 }
 
+/* barra in alto del contatto */
 .opened-contact {
-    height:50px;
+    display:flex;
+    height:60px;
     width:100%;
-    background-color: aqua;
+    background-color: #eaeaea;
 }
+
+.opened-contact img {
+    margin:5px 10px;
+}
+
+.opened-contact-left {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start ;
+    margin-left: 10px;
+    width:60%;
+}
+
+.opened-contact-right {
+    display:flex;
+    flex-direction: row;
+    width:32%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.opened-contact-right i {
+    margin:0 15px;
+    font-size: 20px;
+    color: #b6b9bb;
+
+}
+
+
+/* riquadro della chat */
 
 .chat {
     height:calc(100% - 115px);
     width:100%;
-    background-color: indianred;
+    background-image: url(img/mine.jpg);
 }
 
+
+
+
+/* sezione Scrivi messaggio in fondo */
 .write-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height:65px;
     width:100%;
-    background-color: royalblue;
+    background-color: #f3eeea;
+}
+
+.write-message input {
+    width:80%;
+    height:80%;
+    margin:0 20px;
+    padding-left:20px;
+    border-style: none;
+    border-radius: 5px;
+    color: #f3eeea;
+}
+
+.write-message i {
+    font-size: 25px;
+    margin:0 20px;
+    color:#6b7377;
 }
 
 
