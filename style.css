@@ -231,7 +231,7 @@ img {
 }
 
 .opened-contact img {
-    margin:5px 10px;
+    margin:8px 10px;
 }
 
 .opened-contact-left {
@@ -260,10 +260,25 @@ img {
 
 /* riquadro della chat */
 
-.chat {
-    height:calc(100% - 115px);
+.background-chat {
+    background-color: white;
     width:100%;
+    height:calc(100% - 115px);
+}
+.chat {
+    height: 100%;
+    width:98%;
     background-image: url(img/mine.jpg);
+}
+
+.userMessage {
+    background-color: #d5f9ba;
+
+}
+
+.myFriendMessage {
+    background-color: white;
+
 }
 
 
@@ -280,7 +295,7 @@ img {
 }
 
 .write-message input {
-    width:80%;
+    width:85%;
     height:80%;
     margin:0 20px;
     padding-left:20px;
