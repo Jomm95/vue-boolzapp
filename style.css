@@ -38,10 +38,10 @@
 }
 
 #container {
-    DISPLAY:flex;
-    width: 85vw;
-    height:96vh;
-    margin:2vh auto;
+    display:flex;
+    width: 88vw;
+    height:94vh;
+    margin:3vh auto;
     background: blue;
     position:relative;
     z-index: 999;
@@ -51,7 +51,8 @@
 /* aside (left) */
 
 .contacts {
-    position: relative;
+    display:flex;
+    flex-direction: column;
     min-width: 200px;
     width:30%;
     height:100%;
@@ -61,7 +62,7 @@
 
 /* section (RIGHT) */
 .chat {
-    position: relative;
+    display:flex;
     width:70%;
     height:100%;
     background-color: green;
