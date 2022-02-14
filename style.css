@@ -33,17 +33,39 @@
 
 /* MAIN  */
 
+.debug {
+    border:1px solid black;
+}
+
 #container {
+    DISPLAY:flex;
     width: 85vw;
     height:96vh;
     margin:2vh auto;
-    padding-top: 20px;
     background: blue;
     position:relative;
     z-index: 999;
+    justify-content: center;
 }
 
 /* aside (left) */
+
+.contacts {
+    position: relative;
+    min-width: 200px;
+    width:30%;
+    height:100%;
+    background-color: red;
+
+}
+
+/* section (RIGHT) */
+.chat {
+    position: relative;
+    width:70%;
+    height:100%;
+    background-color: green;
+}
 
 
 
