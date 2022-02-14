@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+/* background */
+#background-div {
+    position:absolute;
+    z-index: 1;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+#green-bar {
+    min-height: 100px;
+    background-color: #1d9688;
+    position:absolute;
+    top:0;
+    width:100%;
+}
+
+#background-page {
+    background-color: #d8dbd5;
+    position:absolute;
+    top:100px;
+    height: calc(100vh - 100px);
+    width:100%;
+}
+
+/* MAIN  */
+
+#container {
+    width: 85vw;
+    height:96vh;
+    margin:2vh auto;
+    padding-top: 20px;
+    background: blue;
+    position:relative;
+    z-index: 999;
+}
+
+/* aside (left) */
+
+
+
