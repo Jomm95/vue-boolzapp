@@ -2,6 +2,14 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+img {
+    width:45px;
+    border-radius: 50%;
+    margin: 0 10px;
 }
 
 
@@ -42,13 +50,12 @@
     width: 88vw;
     height:94vh;
     margin:3vh auto;
-    background: blue;
     position:relative;
     z-index: 999;
     justify-content: center;
 }
 
-/* aside (left) */
+/* aside (LEFT) */
 
 .contacts {
     display:flex;
@@ -56,16 +63,186 @@
     min-width: 200px;
     width:30%;
     height:100%;
-    background-color: red;
-
 }
 
-/* section (RIGHT) */
-.chat {
+/* User Info */
+.userName {
     display:flex;
+    justify-content: flex-start;
+    height:60px;
+    width:100%;
+    background-color: #eaeaea;
+}
+
+.userName-details {
+    width:50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.userName-icons {
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userName-icons i {
+    font-size: 20px;
+    margin:0 15px;
+    color:#b1b1b1;
+}
+
+/* notifications */
+
+.notifications {
+    display:flex;
+    align-items: center;
+    height:70px;
+    width:100%;
+    background-color:#8edafc;
+}
+
+.notifications i {
+    font-size: 22px;
+    border-radius: 50%;
+    color:#8edafc;
+    background-color: white;
+    margin: 0 12px;
+    padding:10px;
+}
+
+.notifications-text {
+    display:flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.notifications-text .bold {
+    font-weight: bold;
+}
+
+.notifications a {
+    color:#507687;
+}
+
+/* container search e contatti */
+
+.contacts-container {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    height:calc(100% - 130px);
+    width:100%;
+    background-color: #fafafa;
+}
+
+/* SearchBar */
+.searchBar {
+    display:flex;
+    align-items: center;
+    height:60px;
+    width:100%;
+    position:relative;
+}
+
+.searchBar input {
+    width:98%;
+    height:70%;
+    padding-left: 20px;
+    margin-left:5px;
+    color:#aaaaaa;
+}
+
+.searchBar i {
+    position: absolute;
+    left:15px;
+    color: #b6b9bb;
+}
+
+/* contatti */
+
+.contacts-box {
+    position: relative;
+    height:calc(100% - 30px);
+    width:97%;
+    border-right: 1px solid #b6b9bb;
+    background-color: white;
+}
+
+.contact {
+    position: relative;
+    display:flex;
+    height:70px;
+    width:100%;
+    border-top: 1px solid #b6b9bb;
+    background-color: white;
+}
+
+.img-container {
+    display: flex;
+    align-content: center;
+    padding:10px 0;
+}
+
+.text-container {
+    width:100%;
+    position:relative;
+    margin-left:10px;
+    margin-top: 8px;
+}
+
+.text-container p {
+    font-size: 14px;
+    color: #b6b9bb;
+}
+
+.text-container span {
+    position:absolute;
+    font-size: 14px;
+    top:2px;
+    right:5px;
+    color:#b6b9bb;
+}
+
+.contact:hover {
+    background-color: #e9ebeb;
+}
+
+
+
+
+
+
+
+/* section (RIGHT) */
+.chat-container {
+    display:flex;
+    flex-direction: column;
     width:70%;
     height:100%;
     background-color: green;
+}
+
+.opened-contact {
+    height:50px;
+    width:100%;
+    background-color: aqua;
+}
+
+.chat {
+    height:calc(100% - 115px);
+    width:100%;
+    background-color: indianred;
+}
+
+.write-message {
+    height:65px;
+    width:100%;
+    background-color: royalblue;
 }
 
 
