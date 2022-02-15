@@ -1,7 +1,10 @@
-*{
+* {
     margin:0;
     padding:0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Signika Negative', sans-serif;
 }
@@ -45,7 +48,7 @@ img {
     border:1px solid black;
 }
 
-#container {
+.container {
     display:flex;
     width: 88vw;
     height:94vh;
@@ -266,17 +269,32 @@ img {
     height:calc(100% - 115px);
 }
 .chat {
+    display:flex;
+    flex-direction: column;
     height: 100%;
     width:98%;
     background-image: url(img/mine.jpg);
 }
 
-.userMessage {
-    background-color: #d5f9ba;
-
+.message {
+    display:flex;
+    align-items: center;
+    height:30px;
+    width:30%;
+    padding: 20px 20px;
+    margin:5px 0;
+    border-radius: 10px;
+    border:1px solid red;
 }
 
-.myFriendMessage {
+.message.sent {
+    display: flex;
+    background-color: #d5f9ba;
+    
+}
+
+.message.received {
+    display: flex;
     background-color: white;
 
 }
