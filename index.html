@@ -71,7 +71,10 @@
 
                     <div class="contacts-box">
 
-                        <div class="contact" v-for="contact in contacts">
+                        <div class="contact"
+                            :class="(index == active)?'active': ''"
+                            v-for="(contact, index) in contacts" 
+                            @click="contactActive(index)">
                             <div class="img-container">
                                 <img :src='`./img/avatar${contact.avatar}.jpg`'>
                             </div>
@@ -112,14 +115,22 @@
                 <!-- chat -->
                 <div class="background-chat">
                     <div class="chat">
-                        <div class="message send">
+
+                        <div class="message" :class="message.status" v-for="message in contacts[active].messages">
+                        {{message.text}}
+                            <div class="sentDate">{{message.date}}</div>
+                        </div>
+                        
+                        <!-- struttura statica che non serve più -->
+                        <!-- <div class="message sent">
                             Lorem Ipsum
                             <div class="sentDate">10/01/2020 15:50:00</div>
                         </div>
+
                         <div class="message received">
                             Lorem Ipsum
                             <div class="sentDate">10/01/2020 15:50:00</div>
-                        </div>
+                        </div> -->
                         
                     </div>
                 </div>
@@ -127,7 +138,11 @@
 
                 <div class="write-message">
                     <i class="fa-solid fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text"
+                           placeholder="Scrivi un messaggio"
+                           v-model="newMessage"
+                           @keyup.enter="sendMessage"
+                    >
                     <i class="fa-solid fa-microphone"></i>
                 </div>
 

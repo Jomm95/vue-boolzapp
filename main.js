@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#root',
     data : {
-        contacts: [
+        contacts : [
             {
                 name: 'Michele',
                 avatar: '_1',
@@ -83,16 +83,25 @@ const app = new Vue({
                         text: 'Si, ma preferirei andare al cinema',
                         status: 'received'
                     },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        text: 'Si, ma preferirei andare al cinema',
-                        status: 'received'
-                    }
                 ]
             },
         ],
-        methods: {
-            
+        active:0,
+        newMessage:"",
+    },
+    methods: {
+        contactActive (index) {
+            this.active = index;
+        },
+
+        sendMessage() {
+            const messageSent = {
+
+
+            }
         }
+            
     }
-})
+
+});
+    
