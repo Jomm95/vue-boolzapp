@@ -63,7 +63,12 @@
 
                     <!-- searchbar -->
                     <div class="searchBar">
-                        <input type="text" name="txtBox" placeholder="                   Cerca o inizia una nuova chat">
+                        <input type="text"
+                               name="txtBox" 
+                               placeholder="                   Cerca o inizia una nuova chat"
+                               v-model="mySearch"
+                               @keyup = 'searchContact()'
+                        >
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
 
@@ -74,7 +79,9 @@
                         <div class="contact"
                             :class="(index == active)?'active': ''"
                             v-for="(contact, index) in contacts" 
-                            @click="contactActive(index)">
+                            @click="contactActive(index)"
+                            v-if="contact.visible == true"
+                            >
                             <div class="img-container">
                                 <img :src='`./img/avatar${contact.avatar}.jpg`'>
                             </div>
@@ -151,6 +158,9 @@
         </div>
 
     </main>
+
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="main.js" rel="text/javascript"></script>

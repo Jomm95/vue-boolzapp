@@ -287,6 +287,7 @@ img {
     height: 100%;
     width:100%;
     background-image: url(img/mine.jpg);
+    overflow-y: auto;
 }
 
 .message {
@@ -339,7 +340,6 @@ img {
     padding-left:20px;
     border-style: none;
     border-radius: 5px;
-    color: #f3eeea;
 }
 
 .write-message i {

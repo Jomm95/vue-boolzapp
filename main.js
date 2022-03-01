@@ -88,18 +88,57 @@ const app = new Vue({
         ],
         active:0,
         newMessage:"",
+        mySearch : ''
     },
     methods: {
         contactActive (index) {
             this.active = index;
         },
 
+        //funzione che manda il messaggio premendo invio
         sendMessage() {
+
+            /*definisco un nuovo oggetto che sarà il nuovo messaggio da pushare
+            dopo gli altri messaggi */
             const messageSent = {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: this.newMessage,
+                status: 'sent'
+            };
+
+            //pusha nuovo messaggio
+            this.contacts[this.active].messages.push(messageSent);
+
+            //reimposta il campo newMessage vuoto
+            this.newMessage = "";
 
 
-            }
-        }
+            //adesso creiamo un messaggio di risposta dopo un secondo
+
+            const reply = {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: "ok",
+                status: 'received'
+            };
+
+            //arrow function nella funzione permette di mantenere lo scope
+            //del this senza ricorrere al "let that = this;"
+            setTimeout(() => {
+                this.contacts[this.active].messages.push(reply);
+
+            },1500);
+        },
+
+        searchContact() {
+            this.contacts.forEach((element) => {
+              if ( element.name.toLowerCase().includes(this.mySearch)) {
+                  element.visible = true;
+                } else {
+                    element.visible = false;
+                } 
+                
+            });
+        },
             
     }
 
